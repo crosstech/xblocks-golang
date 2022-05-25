@@ -21,7 +21,7 @@ var mockTodos = []entities.Todo{
 		CreatedBy:   "John Doe",
 	}}
 
-func (d DataAccess) dataGetById(id int) *entities.Todo {
+func (d DataAccess) GetTodoById(id int) *entities.Todo {
 	// Querying Data
 	for _, v := range mockTodos {
 		if v.Id == id {
@@ -32,7 +32,7 @@ func (d DataAccess) dataGetById(id int) *entities.Todo {
 	return nil
 }
 
-func (d DataAccess) dataGetIndexById(id int) int {
+func (d DataAccess) GetTodoIndexById(id int) int {
 	// Querying Data
 	for _, v := range mockTodos {
 		if v.Id == id {
