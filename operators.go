@@ -24,12 +24,12 @@ func OperateHttpRequest[T IEndoint](response http.ResponseWriter, endpoint T) {
 	}
 
 	// Handling Phase
-	todo, err := endpoint.Handle()
+	data, err := endpoint.Handle()
 	if err != nil {
 		response.WriteHeader(http.StatusInternalServerError)
 		response.Write([]byte(`{ "message": "` + err.Error() + `" }`))
 		return
 	}
 
-	json.NewEncoder(response).Encode(todo)
+	json.NewEncoder(response).Encode(data)
 }

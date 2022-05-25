@@ -1,2 +1,3 @@
 # xblocks-golang
-XBlocks for Golang
+
+XBlocks library implementation in Golang
